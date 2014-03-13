@@ -1,5 +1,12 @@
+
+from Drawing2 import Simple_drawing_window2
+from Drawing3 import Simple_drawing_window3
+
+
 from PySide.QtCore import *
 from PySide.QtGui import *
+
+
 class Simple_drawing_window1(QWidget):
     def __init__(self):
         QWidget.__init__(self,None)
@@ -26,10 +33,14 @@ class Simple_drawing_window1(QWidget):
         p.drawImage(QRect(200,100,320,277),self.rabbit)
         p.end()
 
+def main():
+    app  = QApplication([])
+    draw1 = Simple_drawing_window1()
+    draw1.show()
 
-app  = QApplication([])
+    draw2 = Simple_drawing_window2()
+    draw2.show()
 
-draw = Simple_drawing_window1()
-draw.show()
-
-app.exec_()
+    app.exec_()
+if __name__ =="__main__":
+    main()

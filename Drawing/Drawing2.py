@@ -4,7 +4,7 @@ class Simple_drawing_window2(QWidget):
     def __init__(self):
         QWidget.__init__(self,None)
         self.setWindowTitle("Simple drawing")
-        self.rabbit = QImage("img/rabbit.png")
+        self.rabbit = QImage("image/rabbit.png")
 
     def paintEvent(self,e):
         p = QPainter()
@@ -21,9 +21,11 @@ class Simple_drawing_window2(QWidget):
       
         p.drawImage(QRect(200,100,320,320),self.rabbit)
         p.end()
+def main():
+    app  = QApplication([])
+    draw = Simple_drawing_window2()
+    draw.show()
+    app.exec_()
+if __name__ =="main":
+    main()
 
-app  = QApplication([])
-
-draw = Simple_drawing_window2()
-draw.show()
-app.exec_()

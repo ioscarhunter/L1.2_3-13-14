@@ -1,11 +1,11 @@
 from PySide.QtCore import *
 from PySide.QtGui import *
 
-class Simple_drawing_window(QWidget):
+class Simple_drawing_window3(QWidget):
     def __init__(self):
         QWidget.__init__(self,None)
         self.setWindowTitle("Simple Drawing")
-        self.rabbit = QImage("images/Rabbit.png")
+        self.rabbit = QImage("image/Rabbit.png")
     def paintEvent(self,e):
         p=QPainter()
         p.begin(self)
@@ -22,8 +22,6 @@ class Simple_drawing_window(QWidget):
 
         p.drawImage(QRect(200,100,320,320),self.rabbit)
         p.end()
-app = QApplication([])
 
-draw = Simple_drawing_window()
-draw.show()
-app.exec_()
+
+

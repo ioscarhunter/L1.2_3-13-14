@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d5e0418e-a480-4725-bc69-6720250ede71</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Drawing.py</StartupFile>
+    <StartupFile>module1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Drawing.py" />
+    <Compile Include="Drawing1.py" />
+    <Compile Include="Drawing2.py" />
+    <Compile Include="Drawing3.py" />
+    <Compile Include="module1.py" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
 </Project>
